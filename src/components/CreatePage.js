@@ -49,14 +49,14 @@ class CreatePage extends React.Component {
                <input
               className='w-100 pa3 mv2'
               value={this.state.name}
-              placeholder='Detination Name'
+              placeholder='Destination Name'
               onChange={e => this.setState({ name: e.target.value })}
               autoFocus
             />
             <input
               className='w-100 pa3 mv2'
               value={this.state.city}
-              placeholder='Detination city'
+              placeholder='Destination city'
               onChange={e => this.setState({ city: e.target.value })}
               autoFocus
             />
