@@ -17,6 +17,7 @@ class CreatePage extends React.Component {
     im1:'',
     im2:'',
   category:'',
+  loadtxt: ''
   }
 
   render() {
@@ -103,13 +104,13 @@ class CreatePage extends React.Component {
               placeholder='Description'
               onChange={e => this.setState({ tdescription: e.target.value })}
             />
-            {this.state.description &&
+            {this.state.tdescription &&
               this.state.logo && this.state.logosmall &&
               <button
-                className='pa3 bg-black-10 bn dim ttu pointer'
+                className='w-100 pa3 bg-primary-10 bn dim ttu pointer'
                 onClick={this.handlePost}
               >
-                Create
+                {this.state.loadtxt?this.state.loadtxt:<div>CREATE DESTINATION</div>} 
               </button>}
           </div>
         </div>
@@ -118,6 +119,9 @@ class CreatePage extends React.Component {
   }
 
   handlePost = async () => {
+    this.setState({
+      loadtxt:'Loading...'
+  })
     const { city,
     color,
     logo,
