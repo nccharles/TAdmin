@@ -1,0 +1,19 @@
+.login{
+    height: 100vh;
+    background: #40926d;
+    margin-top: 0%;
+    overflow: hidden;
+    /* align-items: center; */
+}
+.cardl{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    padding: 5%;
+}
+.center{
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
