@@ -40,12 +40,12 @@ class CreatePage extends React.Component {
       >
         <div style={{ backgroundColor: '#113F53' }} className='pa4 flex justify-center bg-white'>
           <div style={{ maxWidth: 400 }} className=''>
-            {this.state.logo &&
+            {/* {this.state.logo &&
               <img
                 src={this.state.logo}
                 alt=''
                 className='w-100 mv3'
-              />}
+              />} */}
                <input
               className='w-100 pa3 mv2'
               value={this.state.name}
