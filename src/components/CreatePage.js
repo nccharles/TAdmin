@@ -16,6 +16,7 @@ class CreatePage extends React.Component {
   tdescription:'',
     im1:'',
     im2:'',
+    phone:'',
   category:'',
   loadtxt: ''
   }
@@ -74,7 +75,13 @@ class CreatePage extends React.Component {
               onChange={e => this.setState({ logosmall: e.target.value })}
               autoFocus
             />
-            
+            <input
+              className='w-100 pa3 mv2'
+              value={this.state.phone}
+              placeholder='Phone number'
+              onChange={e => this.setState({ phone: e.target.value })}
+              autoFocus
+            />
             <select className='w-100 pa3 mv2'
             value={this.state.category}
             onChange={e => this.setState({ category: e.target.value })}
@@ -130,6 +137,7 @@ class CreatePage extends React.Component {
     tdescription,
       im1,
       im2,
+      phone,
     category} = this.state
     await this.props.createLocationMutation({ variables: { city,
       color,
@@ -139,6 +147,7 @@ class CreatePage extends React.Component {
       tdescription,
         im1,
         im2,
+        phone,
       category } })
     this.props.history.replace('/home')
   }
@@ -155,6 +164,7 @@ const CREATE_POST_MUTATION = gql`
     $tdescription: String!,
     $im1: String!,
     $im2: String!,
+    $phone: String!,
     $category: ID!,
   ) {
     createLocation(
@@ -166,6 +176,7 @@ const CREATE_POST_MUTATION = gql`
       logosmall: $logosmall,
       title: $name,
       images:[$im1,$im2],
+      phone: $phone,
       needId: $category
     ){
       id
@@ -175,6 +186,7 @@ const CREATE_POST_MUTATION = gql`
     tdescription
     logo
     logosmall
+    phone
     title
     images
     }
