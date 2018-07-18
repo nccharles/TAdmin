@@ -12,9 +12,11 @@ class EditPage extends React.Component {
   color:'#00b894',
   logo:'',
   logosmall:'',
+  name:'',
   tdescription:'',
     im1:'',
     im2:'',
+    phone:'',
   category:'',
   }
 
@@ -94,7 +96,7 @@ class EditPage extends React.Component {
               placeholder='Description'
               onChange={e => this.setState({ tdescription: e.target.value })}
             />
-            {this.state.description &&
+            {this.state.tdescription &&
               this.state.logo && this.state.logosmall &&
               <button
                 className='w-100 pa3 bg-primary-10 bn dim ttu pointer'

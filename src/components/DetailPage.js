@@ -27,7 +27,6 @@ class DetailPage extends React.Component {
     }
 
     const {Location} = this.props.placeQuery
-  console.log(Location)
     return (
       <Modal
         isOpen
